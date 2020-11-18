@@ -4,18 +4,20 @@ import { ThemeProvider } from 'styled-components';
 import '../node_modules/bulma/css/bulma.min.css';
 import Theme from './global/themes';
 import GlobalStyle from './global/styles.js';
-import './App.css';
+import firebase, {FirebaseContext} from './firebase'
 
 function App() {
     return (
-        <ThemeProvider theme={Theme}>
-            <div className="App">
-                <GlobalStyle />
-                <header className="App-header">
-                    <Form />
-                </header>
-            </div>
-        </ThemeProvider>
+        <FirebaseContext.Provider value={{firebase}}>
+            <ThemeProvider theme={Theme}>
+                <div className="App">
+                    <GlobalStyle />
+                    <header className="App-header">
+                        <Form />
+                    </header>
+                </div>
+            </ThemeProvider>
+        </FirebaseContext.Provider>
     );
 }
 

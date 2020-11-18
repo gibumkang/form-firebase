@@ -1,5 +1,5 @@
+//serves as a master scss file if you will
 import { createGlobalStyle } from 'styled-components';
-
 const GlobalStyle = createGlobalStyle`
     html {
         font-size: 62.5%;
@@ -10,6 +10,8 @@ const GlobalStyle = createGlobalStyle`
     }
     h1, h2, h3, h4, h5 {
         margin: 0;
+        font-weight: bold;
+        font-family: ${props => props.theme.fonts.header}
     }
     h1 {
         font-size: 3.5rem;

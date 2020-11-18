@@ -2,12 +2,8 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const buttonVariants = {
-    initial: {
-        background: '#8a128a',
-    },
     hover: {
-        scale: 1.05,
-        background: '#6e036e',
+        scale: 1.025,
         transition: { duration: 0.025 },
     },
     tap: {
@@ -40,12 +36,12 @@ export const Button = styled(motion.button)`
     text-transform: uppercase;
     text-align: center;
     font-size: 1.4rem;
-    background: #8a128a;
-    color: #fff;
     font-weight: bold;
+    color: #fff;
     transition: all 0.25s ease-in-out;
+    background: ${props => props.submitted ? '#888' : '#8a128a'};
     &:hover {
-        cursor: pointer;
+        cursor: ${props => props.submitted ? 'not-allowed' : 'pointer'};
     }
 `;
 
@@ -58,8 +54,16 @@ export const Form = styled.form`
     h2 {
         text-align: center;
         margin-bottom: 1.5rem;
+        font-size: 2.5rem;
+        color: #222;
     }
 `;
+
+export const Error = styled.div`
+    color: #cf2317;
+    font-size: 1.3rem;
+    font-weight: bold;
+`
 
 export const Flex = styled.div`
     display: flex;
@@ -78,3 +82,15 @@ export const Flex = styled.div`
         }
     }
 `;
+
+//the label which is part of Flex has been left in on purpose
+//to showcase the difference between regular scss and styled-components
+
+export const Label = styled.label`
+    display: block;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    color: ${props => props.triggerError ? '#cf2317' : '#333'};
+`
