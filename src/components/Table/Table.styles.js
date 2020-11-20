@@ -63,9 +63,14 @@ export const TableFooter = styled.div`
     padding: 2.5rem 0rem;
     h2 {
         font-size: 3rem;
+        padding: 0rem 1rem;
     }
     p {
         font-size: 1.5rem;
         padding-top: 2.5rem;
     }
+`
+
+export const TableContainer = styled.div`
+    margin-bottom: 0rem !important;
 `

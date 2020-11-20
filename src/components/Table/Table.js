@@ -40,8 +40,8 @@ const Table = () => {
     return (
         <S.Container>
             <GS.Copy><h2>The competition can’t beat our numbers.</h2></GS.Copy>
-            <div className={size.width <= 1100 ? 'table-container' : undefined}>
-                <S.MainTable className="table is-bordered is-hoverable is-striped">
+            <S.TableContainer className={size.width <= 1100 ? 'table-container' : undefined}>
+                <S.MainTable className="table is-bordered is-hoverable">
                 <thead>
                     <tr>
                         <S.CarHeader><img src={car} alt="Save on your auto insurance"/></S.CarHeader>
@@ -61,10 +61,9 @@ const Table = () => {
                     ))}
                 </tbody>
                 </S.MainTable>
-            </div>
+            </S.TableContainer>
             <S.TableFooter>
                 <h2>Drivers who switch saves an average of $x a year.</h2>
-                <h2>Take five minutes to get your quote now.</h2>
                 <p>Average monthly premium. Prices may vary based on age, driving history, and more.</p>
             </S.TableFooter>
         </S.Container>
