@@ -10,14 +10,18 @@ export const MainTable = styled.table`
     td {
         color: #949191;
         font-family: ${props => props.theme.fonts.header};
+        vertical-align: middle;
+        @media screen and (max-width: 1100px){
+            font-size: 1.9rem;
+        }
+    }
+    td, th {
+        font-size: 2.2rem;
     }
     th {
         font-weight: normal;
-    }
-    td, th {
-        font-size: 2.5rem;
         @media screen and (max-width: 1100px){
-            font-size: 1.9rem;
+            font-size: 1.7rem;
         }
     }
 `
@@ -30,7 +34,10 @@ export const CarHeader = styled.th`
     width: 39rem;
     position: relative;
     img {
-        max-width: 32rem;
+        max-width: 40rem;
+        position: absolute;
+        bottom: 2rem;
+        left: -2rem;
         @media screen and (max-width: 1100px){
             display: none;
         }
@@ -41,5 +48,24 @@ export const LogoHeader = styled.th`
     width: 27rem;
     img {
         padding: 1.5rem 2.5rem;
+        margin-top: 1.75rem;
+        @media screen and (max-width: 1100px){
+            padding: 0rem;
+            margin-top: 1rem;
+        }
+    }
+`
+
+export const TableFooter = styled.div`
+    background: #fff;
+    color: #666;
+    text-align: center;
+    padding: 2.5rem 0rem;
+    h2 {
+        font-size: 3rem;
+    }
+    p {
+        font-size: 1.5rem;
+        padding-top: 2.5rem;
     }
 `

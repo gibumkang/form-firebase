@@ -8,6 +8,7 @@ import Header from './components/Header';
 import CTA from './components/CTA';
 import Triad from './components/Triad';
 import Table from './components/Table';
+import Footer from './components/Footer';
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
                     <CTA />
                     <Triad />
                     <Table />
+                    <Footer />
             </ThemeProvider>
         </FirebaseContext.Provider>
     );

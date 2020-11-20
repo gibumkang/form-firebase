@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Allstate from '../../assets/allstate.png';
+import Allstate from '../assets/allstate.png';
 
 const MainHeader = styled.header`
     width: 100%;
