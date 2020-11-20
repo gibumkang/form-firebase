@@ -39,23 +39,35 @@ export const Button = styled(motion.button)`
     font-weight: bold;
     color: #fff;
     transition: all 0.25s ease-in-out;
-    background: ${props => props.submitted ? '#888' : '#8a128a'};
+    background: ${props => props.submitted ? props.theme.colors.disabled : props.theme.colors.primary};
     &:hover {
         cursor: ${props => props.submitted ? 'not-allowed' : 'pointer'};
     }
 `;
 
 export const Form = styled.form`
+    margin: 0 auto;
     max-width: 40rem;
     background: #eee;
     border: 0.1rem solid #999;
     border-radius: 0.5rem;
     padding: 2rem;
+    p {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-top: 1.5rem;
+    }
     h2 {
         text-align: center;
         margin-bottom: 1.5rem;
         font-size: 2.5rem;
-        color: #222;
+        color: ${props => props.theme.colors.primary};
+    }
+    @media screen and (max-width: 850px){
+        margin-right: 2.5rem;
+    }
+    @media screen and (max-width: 570px){
+        margin: 0 auto;
     }
 `;
 
@@ -92,5 +104,5 @@ export const Label = styled.label`
     margin-top: 0.5rem;
     letter-spacing: 0.1rem;
     text-transform: uppercase;
-    color: ${props => props.triggerError ? '#cf2317' : '#333'};
+    color: ${props => props.triggerError ? props.theme.colors.danger : '#333'};
 `

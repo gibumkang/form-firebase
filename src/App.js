@@ -1,21 +1,23 @@
 import React from 'react';
-import Form from './components/Form';
 import { ThemeProvider } from 'styled-components';
 import '../node_modules/bulma/css/bulma.min.css';
 import Theme from './global/themes';
 import GlobalStyle from './global/styles.js';
-import firebase, {FirebaseContext} from './firebase'
+import firebase, {FirebaseContext} from './firebase';
+import Header from './components/Header';
+import CTA from './components/CTA';
+import Triad from './components/Triad';
+import Table from './components/Table';
 
 function App() {
     return (
         <FirebaseContext.Provider value={{firebase}}>
             <ThemeProvider theme={Theme}>
-                <div className="App">
-                    <GlobalStyle />
-                    <header className="App-header">
-                        <Form />
-                    </header>
-                </div>
+                <GlobalStyle />
+                    <Header />
+                    <CTA />
+                    <Triad />
+                    <Table />
             </ThemeProvider>
         </FirebaseContext.Provider>
     );

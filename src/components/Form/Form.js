@@ -1,7 +1,7 @@
 import React, {useContext, useEffect} from 'react';
 import useFormValidation from '../../hooks/useFormValidation';
 import validate from '../../utils/validate';
-import * as S from './Form.styles.js';
+import * as S from './Form.styles';
 import FirebaseContext from '../../firebase/context';
 
 const INITIAL_STATE = {
@@ -24,14 +24,14 @@ export const Form = () => {
                 phone,
                 email,
                 created: new Date().toLocaleString(),
-
             })
             console.log('Logged successfully.')
         }
     }, [submitted]) // eslint-disable-line react-hooks/exhaustive-deps
     return (
+        <>
         <S.Form action="" onSubmit={handleSubmit}>
-            <h2>{submitted ? 'You\'ll hear from us soon.' : 'Get a quote in just five minutes.'}</h2>
+            <h2>{submitted ? 'You\'ll hear from us soon.' : 'Our Vegas agents will help you.'}</h2>
             <S.Flex>
                 <div>
                     {/* leaving one css-in-js for demonstration purposes */}
@@ -95,7 +95,9 @@ export const Form = () => {
             >
                 {submitted ? 'THANKS!' : 'SAVE NOW'}
             </S.Button>
+            <p>Or call us at XXX.XXX.XXXX.</p>
         </S.Form>
+        </>
     );
 };
 

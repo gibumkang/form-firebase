@@ -6,7 +6,11 @@ const GlobalStyle = createGlobalStyle`
     }
     body, html {
         padding: 0;
-		margin: 0;
+        margin: 0;
+    }
+    body {
+        background: rgb(127,17,172);
+        background: linear-gradient(180deg, rgba(127,17,172,1) 0%, rgba(98,15,132,1) 100%);
     }
     h1, h2, h3, h4, h5 {
         margin: 0;
