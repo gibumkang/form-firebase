@@ -14,16 +14,20 @@ const Content = styled.div`
 	}
 `;
 
+const ModalContainer = styled.div`
+	padding: 3rem;
+`;
+
 const Modal = (props) => {
 	return (
-		<div className={`modal ${props.activated ? 'is-active' : undefined}`}>
+		<ModalContainer className={`modal ${props.activated ? 'is-active' : undefined}`}>
 			<div className='modal-background' onClick={() => props.closeModal(false)}></div>
 			<Content className='modal-content'>
 				<h2>{props.content.header}</h2>
 				{props.content.body}
 			</Content>
 			<button className='modal-close is-large' aria-label='close' onClick={() => props.closeModal(false)}></button>
-		</div>
+		</ModalContainer>
 	);
 };
 

@@ -15,7 +15,8 @@ const GlobalStyle = createGlobalStyle`
     h1, h2, h3, h4, h5 {
         margin: 0;
         font-weight: bold;
-        font-family: ${props => props.theme.fonts.header}
+        letter-spacing: .075rem;
+        font-family: ${(props) => props.theme.fonts.header}
     }
     h1 {
         font-size: 3.5rem;

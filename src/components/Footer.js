@@ -47,7 +47,8 @@ const Footer = () => {
 	return (
 		<>
 			<MainFooter>
-				&copy;{new Date().getFullYear()} All Rights Reserved.{' '}
+				&copy;{new Date().getFullYear()} All Rights Reserved.
+				<br />
 				<span id='privacy' onClick={(e) => handler(e)}>
 					Privacy Policy
 				</span>{' '}
