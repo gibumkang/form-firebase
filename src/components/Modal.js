@@ -18,6 +18,14 @@ const ModalContainer = styled.div`
 	padding: 3rem;
 `;
 
+const Button = styled.button`
+	z-index: 999;
+	padding: 1rem;
+	background: #666;
+	border-radius: 50%;
+	box-shadow: 0.1rem 0.1rem 0.1rem #333;
+`;
+
 const Modal = (props) => {
 	return (
 		<ModalContainer className={`modal ${props.activated ? 'is-active' : undefined}`}>
@@ -26,7 +34,7 @@ const Modal = (props) => {
 				<h2>{props.content.header}</h2>
 				{props.content.body}
 			</Content>
-			<button className='modal-close is-large' aria-label='close' onClick={() => props.closeModal(false)}></button>
+			<Button className='modal-close is-large' aria-label='close' onClick={() => props.closeModal(false)}></Button>
 		</ModalContainer>
 	);
 };
