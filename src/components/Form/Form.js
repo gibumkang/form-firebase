@@ -83,7 +83,7 @@ export const Form = () => {
 				>
 					{submitted ? 'THANKS!' : 'SAVE NOW'}
 				</S.Button>
-				<p>Or call us at XXX.XXX.XXXX.</p>
+				<p>Or call us at 702.754.2018</p>
 			</S.Form>
 		</>
 	);
